@@ -1,0 +1,12 @@
+[package]
+name = "euler-rs"
+version = "0.1.0"
+authors = ["Jacob Dillon <jad340@protonmail.com>"]
+
+[lib]
+name = "euler"
+path = "src/lib.rs"
+
+[dependencies]
+rayon = "0.8.2"
+num = "0.1.40"
