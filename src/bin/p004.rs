@@ -1,6 +1,7 @@
 // Problem 4 - Largest palindrome product
 //
 // Find the largest palindrome made from the product of two 3-digit numbers.
+
 fn main() {
     let result = (100..1000).zip(100..1000)
         .map(|x| x.0 * x.1)

@@ -1,12 +1,13 @@
+// Problem 16 - Power digit sum
+//
+// What is the sum of the digits of the number 21000?
+
 extern crate num;
 
 use num::Integer;
 use num::bigint::BigInt;
 use num::bigint::Sign;
 
-// Problem 16 - Power digit sum
-//
-// What is the sum of the digits of the number 21000?
 fn main() {
     let exp_result = pow_by_squaring(BigInt::new(Sign::Plus, vec![2]), BigInt::new(Sign::Plus, vec![1000]));
 

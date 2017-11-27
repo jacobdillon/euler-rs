@@ -1,5 +1,9 @@
+extern crate num;
+
+use num::Integer;
+
 pub fn is_prime(x: u64) -> bool{
-    if x > 2 && x % 2 == 0 {
+    if x > 2 && x.is_even() {
         return false
     }
 
