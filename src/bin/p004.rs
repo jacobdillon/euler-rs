@@ -11,6 +11,14 @@ fn main() {
 }
 
 fn is_palindromic(n: u64) -> bool {
-    let rev_n: String = n.to_string().chars().rev().collect();
-    n.to_string() == rev_n
+    let mut rev = 0;
+    let mut current = n;
+
+    while current != 0 {
+        rev *= 10;
+        rev += current % 10;
+        current /= 10;
+    }
+
+    n == rev
 }
