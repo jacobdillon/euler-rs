@@ -2,8 +2,8 @@
 //
 // Find the largest palindrome made from the product of two 3-digit numbers.
 fn main() {
-    let result = (100..1000).zip(100..1000)
-        .map(|x| x.0 * x.1)
+    let result = (100..1000)
+        .map(|x| x * x)
         .filter(|&x| is_palindromic(x))
         .max().unwrap();
 
@@ -11,6 +11,14 @@ fn main() {
 }
 
 fn is_palindromic(n: u64) -> bool {
-    let rev_n: String = n.to_string().chars().rev().collect();
-    n.to_string() == rev_n
+    let mut rev = 0;
+    let mut current = n;
+
+    while current != 0 {
+        rev *= 10;
+        rev += current % 10;
+        current /= 10;
+    }
+
+    n == rev
 }
